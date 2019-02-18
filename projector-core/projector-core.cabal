@@ -72,6 +72,7 @@ test-suite test
                        Test.Projector.Core.Arbitrary
                        Test.Projector.Core.Check
                        Test.Projector.Core.Eval
+                       Test.Projector.Core.Gen
                        Test.Projector.Core.Match
                        Test.Projector.Core.Syntax
                        Test.Projector.Core.Warn
@@ -98,6 +99,7 @@ benchmark bench
                        Test.Projector.Core.Arbitrary
                        Test.Projector.Core.Check
                        Test.Projector.Core.Eval
+                       Test.Projector.Core.Gen
                        Test.Projector.Core.Match
                        Test.Projector.Core.Syntax
                        Test.Projector.Core.Warn
