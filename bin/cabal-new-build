@@ -1,0 +1,20 @@
+#!/bin/sh -eu
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+PROJECTS="\
+  projector-core \
+  projector-hydrant \
+  projector-html \
+  projector-html-haskell \
+  projector-html-purs \
+  projector-html-runtime-hs \
+  projector-cli"
+
+for x in $PROJECTS; do
+    (cd $ROOT/$x && cabal new-build --enable-test --enable-benchmarks)
+    if [ $? -ne 0 ]; then
+        echo 2>&1 "$x failed cabal check"
+        exit 1
+    fi
+done
